@@ -8,7 +8,7 @@ Swift Color Picker Example is a single view application that provides developers
 This view contains pixelation set to a default value of thirty. It can be adjusted to smaller or larger as required. Using `UILongPressGestureRecognizer` to detect touches at a `CGPoint` which is mapped to the color at that point. 
 
 ### Want change the the pixels?
-This is nice and simple! You can change the size here:
+This is nice and simple! You can change the size here (line 36) in the `ColorPicker.swift` file:
 
 ```Swift
 @IBInspectable var elementSize: CGFloat = 30.0 {
