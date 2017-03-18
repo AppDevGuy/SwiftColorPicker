@@ -7,12 +7,27 @@ Swift Color Picker Example is a single view application that provides developers
 ## Display Color Picker View
 This view contains pixelation set to a default value of thirty. It can be adjusted to smaller or larger as required. Using `UILongPressGestureRecognizer` to detect touches at a `CGPoint` which is mapped to the color at that point. 
 
-I discovered this code at this answer to solve the issue: [Simple swift color picker popover (iOS)](http://stackoverflow.com/a/34142316/4008175) so head over and give some love if my demo app helps. 
+### Want change the the pixels?
+This is nice and simple! You can change the size here:
+
+```Swift
+@IBInspectable var elementSize: CGFloat = 30.0 {
+    didSet {
+        setNeedsDisplay()
+    }
+}
+```
+
+Adjust the value 30.0 to be smaller or greater. That's it!
+
+I discovered this code at this answer to solve the issue: [Simple swift color picker popover (iOS)](http://stackoverflow.com/a/34142316/4008175) so head over and give some love if my demo app helps.
 
 ## Color Brightness Check
 If you noticed in the gif, the button changes font and border color. This is thanks to an extension I have used to detect whether the background color is light or dark. 
 
 I discovered this code at this answer to solve the issue: [Check if UIColor is dark or bright?](http://stackoverflow.com/a/29044899/4008175)
+
+It returns a boolean which details whether the color is currently light or dark. In my own code I have a simple if statement that returns white or black to set the color of the button text and border.
 
 # Additional Info
 Copyright © 2017 Sean Smith. All rights reserved.
