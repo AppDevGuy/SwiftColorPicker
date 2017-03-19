@@ -35,7 +35,7 @@ This is nice and simple! You can change the pixel size after you created the col
 colorview.setElementSize(pixelSize: 4.0)
 ```
 
-Adjust the value 30.0 to be smaller or greater. That's it!
+Adjust the value to be smaller or greater. That's it!
 
 I discovered this code at this answer to solve the issue: [Simple swift color picker popover (iOS)](http://stackoverflow.com/a/34142316/4008175) so head over and give some love if my demo app helps.
 
