@@ -39,6 +39,11 @@ class HSBColorPicker : UIView {
         }
     }
     
+    // Use this function if user want's to change the size of the pixels
+    public func setElementSize(pixelSize : CGFloat){
+        self.elementSize = pixelSize
+    }
+    
     private func initialize() {
         self.clipsToBounds = true
         let touchGesture = UILongPressGestureRecognizer(target: self, action: #selector(HSBColorPicker.touchedColor(_ :)))

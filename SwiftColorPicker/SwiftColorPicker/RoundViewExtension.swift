@@ -1,8 +1,8 @@
 //
-//  BrightnessExtension.swift
+//  RoundViewExtension.swift
 //  SwiftColorPicker
 //
-//  Created by Sean Smith on 18/3/17.
+//  Created by Sean Smith on 19/3/17.
 //  Copyright © 2017 Sean Smith. All rights reserved.
 //
 //  The MIT License (MIT)
@@ -14,39 +14,13 @@
 //
 //  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-// This code has been adapated from this answer here: http://stackoverflow.com/a/29044899/4008175
-
-import Foundation
 import UIKit
 
-extension UIColor {
+extension UIView {
     
-    // Returns whether or not the color is a bright/light color
-    func isLightColor() -> Bool {
-        if let components = self.cgColor.components {
-            // Ensure enough components
-            if components.count < 3{
-                return false
-            }
-            
-            // Had to separate into individual equations
-            // The calculation in one whole was too complex apparently
-            let cOne = ((components[0]) * 299)
-            let cTwo = ((components[1]) * 587)
-            let cThree = ((components[2]) * 114)
-            
-            // Brightness equation
-            let brightness = (cOne + cTwo + cThree) / 1000
-            
-            // If less than 0.5 color is considered "dark"
-            if brightness < 0.5 {
-                return false
-            } else {
-                return true
-            }   
-        }
-        
-        // If it doesn't contain components return false
-        return false
+    // Circle view
+    func circleStyledView() {
+        self.layer.masksToBounds = true
+        self.layer.cornerRadius  = round(self.frame.size.width/2.0)
     }
 }
