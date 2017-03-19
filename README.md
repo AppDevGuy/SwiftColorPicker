@@ -13,15 +13,26 @@ If you want to make some changes or improve, please create it on a separate bran
 ## Display Color Picker View
 This view contains pixelation set to a default value of thirty. It can be adjusted to smaller or larger as required. Using `UILongPressGestureRecognizer` to detect touches at a `CGPoint` which is mapped to the color at that point. 
 
-### Want change the the pixels?
-This is nice and simple! You can change the size here (line 36) in the `ColorPicker.swift` file:
+### Create the color picker (basic)
+It's really simple to create the color picker if you include the `ColorPicker.swift` file.
 
 ```Swift
-@IBInspectable var elementSize: CGFloat = 30.0 {
-    didSet {
-        setNeedsDisplay()
-    }
-}
+// Create a Frame
+let rect = CGRect(x: 0, y: 0 , width: viewWidth! , height: viewHeight!)
+// Create the color view
+let colorview = HSBColorPicker.init(frame: rect)
+// Set the delegate
+colorview.delegate = self
+// Add to the view
+self.view.addSubview(colorview)
+```
+
+### Want change the the color pixel size?
+This is nice and simple! You can change the pixel size after you created the color picker.
+
+```Swift
+// Set the pixel size of the picker
+colorview.setElementSize(pixelSize: 4.0)
 ```
 
 Adjust the value 30.0 to be smaller or greater. That's it!
