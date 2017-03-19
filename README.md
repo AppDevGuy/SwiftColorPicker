@@ -3,6 +3,12 @@ Swift Color Picker Example is a single view application that provides developers
 
 ![alt tag](https://github.com/AppDevGuy/SwiftColorPicker/blob/master/swift-color-picker-demo.gif)
 
+Whether it matters to you, the reader, or not this is pretty rough. I have implemented it as a demonstration of the ease and potential of use. I will tidy up at some point.
+
+I put this together to keep for future use in other projects and wanted to share. I also implemented a circular palette with animation which can be used with menus or other things. 
+
+If you want to make some changes or improve, please create it on a separate branch and submit a Pull Request. Any issues, raise one. 
+
 # Core Features
 ## Display Color Picker View
 This view contains pixelation set to a default value of thirty. It can be adjusted to smaller or larger as required. Using `UILongPressGestureRecognizer` to detect touches at a `CGPoint` which is mapped to the color at that point. 
