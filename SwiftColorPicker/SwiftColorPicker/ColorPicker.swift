@@ -46,7 +46,7 @@ class HSBColorPicker : UIView {
     
     private func initialize() {
         self.clipsToBounds = true
-        let touchGesture = UILongPressGestureRecognizer(target: self, action: #selector(HSBColorPicker.touchedColor(_ :)))
+        let touchGesture = UILongPressGestureRecognizer(target: self, action: #selector(touchedColor(_ :)))
         touchGesture.minimumPressDuration = 0
         touchGesture.allowableMovement = CGFloat(Float.greatestFiniteMagnitude)
         self.addGestureRecognizer(touchGesture)
@@ -113,7 +113,7 @@ class HSBColorPicker : UIView {
         return CGPoint(x: xPos, y: yPos)
     }
     
-    func touchedColor(_ gestureRecognizer: UILongPressGestureRecognizer){
+    @objc func touchedColor(_ gestureRecognizer: UILongPressGestureRecognizer){
         let point = gestureRecognizer.location(in: self)
         let color = getColorAtPoint(point: point)
         
