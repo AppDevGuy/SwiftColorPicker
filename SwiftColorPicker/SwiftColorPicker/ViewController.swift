@@ -63,7 +63,7 @@ class ViewController: UIViewController , HSBColorPickerDelegate {
         // Set the title font size and font
         button!.titleLabel!.font =  UIFont(name: "AppleSDGothicNeo-UltraLight", size: 35)
         // Add the button target
-        button!.addTarget(self, action: #selector(ViewController.showColorPicker(_:)), for: .touchDown)
+        button!.addTarget(self, action: #selector(showColorPicker(_:)), for: .touchDown)
 
         // Add the button to the main view
         self.view.addSubview(button!)
@@ -91,7 +91,7 @@ class ViewController: UIViewController , HSBColorPickerDelegate {
     }
     
     //then make a action method :
-    func showColorPicker(_ sender:UIButton!) {
+    @objc func showColorPicker(_ sender:UIButton!) {
         // Create a Frame
         let rect = CGRect(x: 0, y: 0 , width: viewWidth! , height: viewHeight!)
         let colorview = HSBColorPicker.init(frame: rect)
