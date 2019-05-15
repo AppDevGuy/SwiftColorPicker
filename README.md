@@ -1,3 +1,5 @@
+<a href="https://stackoverflow.com/users/4008175/app-dev-guy"><img src="https://stackoverflow.com/users/flair/4008175.png?theme=dark" width="208" height="58" alt="profile for App Dev Guy at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for App Dev Guy at Stack Overflow, Q&amp;A for professional and enthusiast programmers"></a>
+
 # Swift Color Picker Example
 Swift Color Picker Example is a single view application that provides developers an example of how to display a color picker view over the primary view requiring use of such tool. The code is simple and has been implemented in a way that users should be able to review the code and implement in their own projects in their own ways.
 
